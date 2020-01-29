@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/app_screens/first_screen.dart';
+import './app_screens/first_screen.dart';
 
-void main() {
-  runApp(MaterialApp(
-      title: "my flutter app",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("title bar"),
-        ),
-        body: Material(
-          color: Colors.black,
-          child: Center(
-            child: Text(
-              "hello flutter",
-              textDirection: TextDirection.ltr,
-              style: TextStyle(color: Colors.white, fontSize: 55.0),
+void main() => runApp(new MyFlutterClass());
+
+class MyFlutterClass extends StatelessWidget {
+  const MyFlutterClass({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "my flutter app",
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("title bar"),
             ),
-          ),
-        ),
-      )));
+            body: FirstScreen()));
+  }
 }
